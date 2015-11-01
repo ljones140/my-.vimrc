@@ -14,8 +14,11 @@ Plugin 'scrooloose/nerdTree'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'morhetz/gruvbox'
 Plugin 'tpope/vim-fugitive'
+Plugin 'bling/vim-airline'
 "Plugin 'jscappini/material.vim'
-
+Plugin 'tomasr/molokai'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-surround'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -52,10 +55,16 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 "colorscheme
-colorscheme gruvbox
-let g:gruvbox_termcolors=16
+colorscheme molokai
+"let g:gruvbox_termcolors=16
+
+"Airline config"
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " Switch syntax highlighting on, when the terminal has colors
+
+
 " Also switch on highlighting the last used search pattern.
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
@@ -107,6 +116,9 @@ set shiftwidth=2
 set shiftround
 set expandtab
 
+"colors"
+set t_Co=256
+set wildmenu
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
 
