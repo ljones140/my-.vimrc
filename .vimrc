@@ -173,6 +173,11 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
+" insert lines outside in view mode
+nmap go o<ESC>k
+nmap gO O<ESC>j
+nmap gr o<ESC>kO<ESC>j
+
 " vim-rspec mappings
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
 nnoremap <Leader>s :call RunNearestSpec()<CR>
